@@ -1,0 +1,140 @@
+#banner {
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-img {
+    height: 200px;
+    width: 70%
+}
+
+.navbar {
+    background-color: rgb(255, 187, 109) !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+#logo-pic {
+    width: 3rem;
+}
+
+.fa-shopping-cart:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.product {
+    position: relative;
+    overflow: hidden;
+}
+
+.product:hover {
+    opacity: 0.7;
+}
+
+.product:hover .add-button-textbox {
+    transform: translateX(0);
+}
+
+.product:hover .in-cart-textbox {
+    transform: translateX(0);
+}
+
+.product-img {
+    width: 100%;
+}
+
+.add-button-textbox {
+    position: absolute;
+    top: 70%;
+    background-color: rgb(255, 187, 109);
+    width: 40%;
+    height: 12%;
+    right: 0%;
+    font-weight: bold;
+    transition: all 0.2s linear;
+    transform: translateX(100%);
+    cursor: pointer;
+}
+
+.in-cart-textbox {
+    position: absolute;
+    top: 70%;
+    background-color: rgb(255, 187, 109);
+    width: 40%;
+    height: 12%;
+    right: 0%;
+    font-weight: bold;
+    transition: all 0.2s linear;
+    transform: translateX(100%);
+}
+
+.add-button {
+    color: black;
+}
+
+.add-button:hover {
+    color: white;
+}
+
+.product-name {
+    margin: 2% 0% 0% 0%;
+    font-weight: bold;
+}
+
+.product-price {
+    color: rgb(255, 187, 109);
+    font-weight: bold;
+    margin: 0%;
+}
+
+/* Landing css */
+.banner {
+    background-color: rgb(255, 255, 255, 0.7);
+    position: absolute;
+    top: 40%;
+}
+
+.shop-button {
+    background-color: rgb(255, 187, 109);
+    font-weight: bold;
+}
+
+.shop-button:hover {
+    color: white;
+}
+
+/* Shopping Cart */
+.checkout-button {
+    background-color: rgb(255, 187, 109);
+    font-weight: bold;
+}
+
+.checkout-button:hover {
+    color: white;
+    background-color: rgb(248, 213, 147);
+}
+
+.cart-image {
+    width: 100%;
+}
+
+.modal-info {
+    font-weight: bold;
+}
+
+.fa-chevron-up:hover, .fa-chevron-down:hover {
+    cursor: pointer;
+    color: rgb(248, 213, 147);
+}
+
+#cart-modal-label {
+    font-family: 'Roboto', sans-serif;
+}
+
+.remove-item:hover {
+    cursor: pointer;
+    color: rgb(248, 213, 147);
+}
+
+#total {
+    font-weight: bold;
+}
