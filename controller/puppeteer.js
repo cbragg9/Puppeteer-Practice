@@ -2,7 +2,12 @@ const puppeteer = require("puppeteer");
 
 async function scrape() {
   let url = "https://www.eventbrite.com/d/online/black-lives-matter/?page=1&lang=en";
-  let browser = await puppeteer.launch();
+  let browser = await puppeteer.launch({
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox'
+    ]
+  });
   let page = await browser.newPage();
 
   await page.goto(url, { waitUntil: "networkidle2" });
@@ -11,7 +16,7 @@ async function scrape() {
     let dates = [];
     let titles = [];
     let urls = [];
-    
+
     document.querySelectorAll("div.search-event-card-rectangle-image > div > div > div > article > div.eds-event-card-content__content-container.eds-l-pad-right-2 > div.eds-event-card-content__content > div > div.eds-event-card-content__primary-content > div")
       .forEach(element => {
         if (!dates.includes(element.innerText) && dates.length < 10) dates.push(element.innerText);
