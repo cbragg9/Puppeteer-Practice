@@ -11,8 +11,8 @@ async function scrape() {
     let dates = [];
     let titles = [];
     let urls = [];
-
-    document.querySelectorAll("div.eds-text-color--primary-brand")
+    
+    document.querySelectorAll("div.search-event-card-rectangle-image > div > div > div > article > div.eds-event-card-content__content-container.eds-l-pad-right-2 > div.eds-event-card-content__content > div > div.eds-event-card-content__primary-content > div")
       .forEach(element => {
         if (!dates.includes(element.innerText) && dates.length < 10) dates.push(element.innerText);
       });
@@ -26,7 +26,6 @@ async function scrape() {
       .forEach(element => { 
         if (!urls.includes(element.href) && urls.length < 10) urls.push(element.href)
       })
-
 
     let arrayOfEvents = [];
 
